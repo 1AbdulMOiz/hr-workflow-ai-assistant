@@ -3,6 +3,13 @@ import { api } from '../api.js';
 
 const money = (n) => (n == null ? '—' : `PKR ${Number(n).toLocaleString()}`);
 
+function greeting() {
+  const h = new Date().getHours();
+  if (h < 12) return 'Good morning';
+  if (h < 17) return 'Good afternoon';
+  return 'Good evening';
+}
+
 export default function Dashboard({ user }) {
   const [kpis, setKpis] = useState(null);
   const [error, setError] = useState(null);
@@ -38,7 +45,7 @@ export default function Dashboard({ user }) {
     <>
       <div className="page-head">
         <div>
-          <h1>Dashboard</h1>
+          <h1>{greeting()}, {user.name.split(' ')[0]} 👋</h1>
           <div className="sub">
             {isStaff ? 'Company overview' : 'Your records'} · {kpis.month}
           </div>

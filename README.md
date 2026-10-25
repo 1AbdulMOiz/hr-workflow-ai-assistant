@@ -1,4 +1,4 @@
-# HR Portal + AI Assistant
+# HR Workflow AI Assistant
 
 A small but complete HR management web app with a built-in **AI Assistant** that
 answers questions strictly from the company's own data. React frontend, Node /

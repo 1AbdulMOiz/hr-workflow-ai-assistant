@@ -37,7 +37,7 @@ export default function Login({ onLogin }) {
         </div>
 
         <div className="hero-mid">
-          <h2>Your HR data,<br />answered by AI.</h2>
+          <h2>Your HR data,<br />answered by <span className="accent">AI.</span></h2>
           <p>
             A complete HR management portal with an assistant that answers
             questions strictly from your company's own records — grounded,

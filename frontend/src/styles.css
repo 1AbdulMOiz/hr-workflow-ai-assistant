@@ -319,12 +319,21 @@ tbody tr:last-child td { border-bottom: none; }
   border-radius: 50%;
   filter: blur(10px);
 }
-.login-hero::before { width: 360px; height: 360px; background: rgba(255,255,255,.12); top: -120px; right: -90px; }
-.login-hero::after { width: 260px; height: 260px; background: rgba(255,255,255,.08); bottom: -90px; left: -60px; }
+.login-hero::before { width: 360px; height: 360px; background: rgba(255,255,255,.12); top: -120px; right: -90px; animation: float 9s ease-in-out infinite; }
+.login-hero::after { width: 260px; height: 260px; background: rgba(255,255,255,.08); bottom: -90px; left: -60px; animation: float 11s ease-in-out infinite reverse; }
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-24px, 22px); }
+}
 .login-hero .hero-top { position: relative; z-index: 1; display: flex; align-items: center; gap: 12px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 19px; }
 .login-hero .hero-top .logo { width: 40px; height: 40px; border-radius: 11px; background: rgba(255,255,255,.18); display: grid; place-items: center; font-size: 20px; backdrop-filter: blur(4px); }
 .login-hero .hero-mid { position: relative; z-index: 1; }
 .login-hero .hero-mid h2 { font-size: 34px; line-height: 1.15; font-weight: 800; margin-bottom: 14px; color: #fff; }
+.login-hero .hero-mid h2 .accent {
+  background: linear-gradient(90deg, #ffe08a, #ffd1f0);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
 .login-hero .hero-mid p { font-size: 15.5px; line-height: 1.65; color: rgba(255,255,255,.85); max-width: 42ch; }
 .login-hero .feat { position: relative; z-index: 1; display: grid; gap: 12px; }
 .login-hero .feat div { display: flex; align-items: center; gap: 11px; font-size: 14.5px; color: rgba(255,255,255,.92); }
@@ -357,9 +366,13 @@ tbody tr:last-child td { border-bottom: none; }
   font-weight: 600;
   font-size: 14.5px;
   box-shadow: 0 10px 30px color-mix(in srgb, var(--brand) 45%, transparent);
-  animation: fabIn .5s cubic-bezier(.2,.8,.2,1) both;
+  animation: fabIn .5s cubic-bezier(.2,.8,.2,1) both, fabPulse 2.8s ease-in-out 1s infinite;
 }
 @keyframes fabIn { from { opacity: 0; transform: scale(.8) translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes fabPulse {
+  0%, 100% { box-shadow: 0 10px 30px color-mix(in srgb, var(--brand) 45%, transparent); }
+  50% { box-shadow: 0 10px 30px color-mix(in srgb, var(--brand) 45%, transparent), 0 0 0 10px color-mix(in srgb, var(--brand) 12%, transparent); }
+}
 
 .chat-panel {
   position: fixed;
