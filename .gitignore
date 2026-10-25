@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets  (API keys live here — never commit)
+.env
+.env.*
+!.env.example
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
