@@ -10,6 +10,30 @@ is grounded in a real database lookup, and the API key never leaves the backend.
 
 ---
 
+## Screenshots
+
+### AI Assistant — answers grounded in live HR data
+Every answer carries an **AI-generated** badge and shows the exact secure tool it
+called (`get_headcount`, `get_late_comers`, …). No tool, no number.
+
+![AI Assistant answering from live data](screenshots/ai-chat.png)
+
+### Dashboard
+Role-aware KPIs, most late arrivals and headcount by department — with a one-click
+AI summary written only from the figures on screen.
+
+![Dashboard](screenshots/dashboard.png)
+
+| Login | AI Logs (audit trail) |
+|-------|-----------------------|
+| ![Login](screenshots/login.png) | ![AI Logs](screenshots/ai-logs.png) |
+
+| Employees directory | Assistant in context |
+|---------------------|----------------------|
+| ![Employees](screenshots/employees.png) | ![AI chat on attendance](screenshots/ai-chat-attendance.png) |
+
+---
+
 ## Features
 
 **HR portal**
